@@ -9,9 +9,9 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     return Promise.allSettled(all)
       .then((results) => results.map((result) => ({
         status: result.status,
-        value: result.status === 'fulfilled' ? result.value : String(result.reason),
+        value: result[1],
       })));
   } catch (error) {
-    return [{ status: 'rejected', value: error.message }];
+    return [{ status: result.status, value: error.message }];
   }
 }
