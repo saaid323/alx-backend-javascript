@@ -1,10 +1,10 @@
 export default function updateUniqueItems(map) {
-  if (!map instanceof Map) {
-    return 'Cannot process';
-  }
-  for (const [key, value] of map) {
+  for (const [key, value] of map.entries()) {
+    // eslint-disable-next-line no-unsafe-negation
+    if (!value instanceof Map) {
+      return 'Cannot process';
+    }
     if (value === 1) {
-      console.log(value);
       map.set(key, 100);
     }
   }
