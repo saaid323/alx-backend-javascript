@@ -1,6 +1,9 @@
 export default function cleanSet(set, startString) {
   const arr = [];
   let text = '';
+  if (set.size === 0) {
+    return '';
+  }
   if (startString === '') {
     return '';
   }
