@@ -1,13 +1,13 @@
-export default function cleanSet(set, str) {
+export default function cleanSet(set, startString) {
   const arr = [];
   let text = '';
-  if (str === '') {
+  if (startString === '') {
     return '';
   }
-  if (set instanceof Set && typeof (str) === 'string') {
+  if (set instanceof Set && typeof (startString) === 'string') {
     for (const i of set) {
-      if (i.startsWith(str)) {
-        arr.push(i.slice(str.length));
+      if (i.startsWith(startString)) {
+        arr.push(i.slice(startString.length));
       }
     }
     for (const i in arr) {
