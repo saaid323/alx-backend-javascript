@@ -4,7 +4,7 @@ export default function cleanSet(set, startString) {
   if (set.size === 0) {
     return '';
   }
-  if (startString === '') {
+  if (startString.length === 0) {
     return '';
   }
   if (set instanceof Set && typeof (startString) === 'string') {
@@ -15,7 +15,7 @@ export default function cleanSet(set, startString) {
     }
     for (const i in arr) {
       if (i < arr.length - 1) {
-        text += arr[i] + '-';
+        text += `${arr[i]}-`;
       } else {
         text += arr[i];
       }
