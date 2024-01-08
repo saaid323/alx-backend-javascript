@@ -1,10 +1,10 @@
 export default function cleanSet(set, startString) {
   const arr = [];
   let text = '';
-  if (set.size === 0) {
+  if (set === '') {
     return '';
   }
-  if (startString.length === 0) {
+  if (startString === '') {
     return '';
   }
   if (set instanceof Set && typeof (startString) === 'string') {
