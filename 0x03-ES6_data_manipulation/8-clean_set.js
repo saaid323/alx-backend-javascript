@@ -3,9 +3,6 @@ export default function cleanSet(set, startString) {
   if (!startString || !set) {
     return '';
   }
-  if (set instanceof Set !== true || typeof startString !== 'string') {
-    return '';
-  }
   if (set instanceof Set === true && typeof startString === 'string') {
     for (const i of set) {
       if (i.startsWith(startString) && startString.length > 0) {
