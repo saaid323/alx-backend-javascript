@@ -4,16 +4,18 @@ export default function cleanSet(set, str) {
   if (str === '') {
     return '';
   }
-  for (const i of set) {
-    if (i.startsWith(str)) {
-      arr.push(i.slice(str.length));
+  if (set instanceof Set && typeof (str) === 'string') {
+    for (const i of set) {
+      if (i.startsWith(str)) {
+        arr.push(i.slice(str.length));
+      }
     }
-  }
-  for (const i in arr) {
-    if (i < arr.length - 1) {
-      text += arr[i] + '-';
-    } else {
-      text += arr[i];
+    for (const i in arr) {
+      if (i < arr.length - 1) {
+        text += `${arr[i]}-`;
+      } else {
+        text += arr[i];
+      }
     }
   }
   return text;
