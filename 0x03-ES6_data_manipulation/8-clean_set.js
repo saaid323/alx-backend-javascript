@@ -12,7 +12,7 @@ export default function cleanSet(set, startString) {
     }
     for (const i in arr) {
       if (i < arr.length - 1) {
-        text += `${arr[i]}-`;
+        text += arr[i] + '-';
       } else {
         text += arr[i];
       }
