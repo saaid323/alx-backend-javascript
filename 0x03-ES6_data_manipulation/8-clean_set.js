@@ -3,8 +3,11 @@ export default function cleanSet(set, startString) {
   if (startString === '') {
     return '';
   }
-  if (set instanceof Set && typeof (startString) === 'string') {
+  if (set instanceof Set === true && typeof startString === 'string') {
     for (const i of set) {
+      if (typeof i !== 'string') {
+        return '';
+      }
       if (i.startsWith(startString)) {
         arr.push(i.slice(startString.length));
       }
