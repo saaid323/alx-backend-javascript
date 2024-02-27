@@ -7,7 +7,7 @@ app.listen(1245);
 
 function countStudents(database) {
   return new Promise((resolve, reject) => {
-    if (database) {
+    if (!database) {
       reject(new Error('Cannot load the database'));
     }
     const data = fs.readFileSync(database, { encoding: 'utf8', flag: 'r' });
