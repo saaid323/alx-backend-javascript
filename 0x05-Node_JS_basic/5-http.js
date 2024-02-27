@@ -6,7 +6,7 @@ function countStudents(database) {
     if (!fs.existsSync(database)) {
       reject(new Error('Cannot load the database'));
     }
-    const data = fs.readFileSync('./database.csv', { encoding: 'utf8', flag: 'r' });
+    const data = fs.readFileSync(database, { encoding: 'utf8', flag: 'r' });
     const headers = data.trim().split('\n')[0].trim().split(',');
     const list = data.trim().split('\n');
 
