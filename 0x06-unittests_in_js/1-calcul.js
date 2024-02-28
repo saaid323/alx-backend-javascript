@@ -1,5 +1,5 @@
 function calculateNumber (type, a, b) {
-    let result;
+    let result = 0;
     a = Math.round(a);
     b = Math.round(b);
     if (type === 'SUM') {
