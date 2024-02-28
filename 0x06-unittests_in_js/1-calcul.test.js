@@ -41,7 +41,7 @@ describe('calculateNumber', function() {
     assert.strictEqual(calculateNumber('DIVIDE', 0, -4.5), -0);
     });
     it('zero division', function() {
-      assert.strictEqual(calculateNumber('DIVIDE', 1.4, 0), NaN);
+      assert.strictEqual(calculateNumber('DIVIDE', 1.4, 0), 'Error');
     });
   });
 });
