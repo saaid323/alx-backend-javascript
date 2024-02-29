@@ -1,5 +1,5 @@
 const sinon = require('sinon');
-const { assert } = require('chai');
+const { expect } = require('chai');
 const sendPaymentRequestToApi = require('./5-payment');
 
 describe('sendPaymentRequestToApi', () => {
@@ -17,13 +17,13 @@ describe('sendPaymentRequestToApi', () => {
 
   it('sendPaymentRequestToApi(100, 20)', () => {
     sendPaymentRequestToApi(100, 20);
-    assert(spy.calledWith('The total is: 120'));
-    assert(spy.calledOnce);
+    expect(spy.calledWith('The total is: 120')).to.be.true;
+    expect(spy.calledOnce).to.be.true;
   });
 
   it('sendPaymentRequestToApi(10, 10)', () => {
     sendPaymentRequestToApi(10, 10);
-    assert(spy.calledWith('The total is: 20'));
-    assert(spy.calledOnce);
+    expect(spy.calledWith('The total is: 20')).to.be.true;
+    expect(spy.calledOnce).to.be.true;
   });
 });
