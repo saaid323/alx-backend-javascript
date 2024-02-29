@@ -1,14 +1,14 @@
-const Utils = require('./utils');
 const sendPaymentRequestToApi = require('./3-payment');
+const Utils = require('./utils');
 const sinon = require('sinon');
-const assert = require('assert');
+const { expect } = require('chai');
 
 describe('sendPaymentRequestToApi suite', function() {
   it('spy sendPaymentRequestToApi', function() {
     const spy = sinon.spy(Utils, 'calculateNumber');
     sendPaymentRequestToApi(100, 20);
-    assert(spy.calledWith('SUM', 100, 20));
-    assert(spy.calledOnce);
+    expect(spy.calledWith('SUM', 100, 20)).to.be.true;
+    expect(spy.callCount).to.be.equal(1);
     spy.restore();
-  })
-})
+  });
+});
