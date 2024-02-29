@@ -1,7 +1,7 @@
 const Utils = require('./utils');
 const sendPaymentRequestToApi = require('./4-payment');
 const sinon = require('sinon');
-const assert = require('assert');
+const { assert } = require('chai');
 
 describe('sendPaymentRequestToApi stub suite', function() {
   it('spy and stub sendPaymentRequestToApi', function() {
