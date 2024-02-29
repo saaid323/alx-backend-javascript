@@ -9,9 +9,11 @@ describe('sendPaymentRequestToApi stub suite', function() {
     const spy = sinon.spy(console, 'log');
     stub.withArgs('SUM', 100, 20).returns(10);
     assert.strictEqual(stub('SUM', 100, 20), 10);
+    assert.strictEqual(stub.callCount, 1);
     sendPaymentRequestToApi(100, 20);
     assert.strictEqual(spy.calledWith('The total is: 10'), true);
     assert(spy.calledOnce);
+    // assert.strictEqual(stub.callCount, 1);
     stub.restore();
     spy.restore();
   })
