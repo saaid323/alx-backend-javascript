@@ -49,7 +49,7 @@ const app = http.createServer((req, res) => {
       })
       .catch((error) => {
         res.statusCode = 500;
-        res.end(error.toString());
+        res.end('This is the list of our students\nCannot load the database');
       });
   }
 });
