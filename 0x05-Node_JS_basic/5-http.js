@@ -47,7 +47,7 @@ const app = http.createServer((req, res) => {
       .then((result) => {
         res.end(`This is the list of our students\n${result}`);
       })
-      .catch((error) => {
+      .catch(() => {
         res.statusCode = 500;
         res.end('This is the list of our students\nCannot load the database');
       });
