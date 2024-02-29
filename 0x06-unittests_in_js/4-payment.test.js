@@ -11,6 +11,7 @@ describe('sendPaymentRequestToApi stub suite', function() {
     assert.strictEqual(stub('SUM', 100, 20), 10);
     sendPaymentRequestToApi(100, 20);
     assert.strictEqual(spy.calledWith('The total is: 10'), true);
+    assert(spy.calledOnce);
     stub.restore();
     spy.restore();
   })
