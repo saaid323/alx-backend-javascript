@@ -9,10 +9,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^10.3.0"
+    "mocha": "^10.3.0",
+    "sinon": "^4.5.0"
   },
   "dependencies": {
-    "chai": "^4.4.1",
+    "chai": "^4.3.4",
     "node-fetch": "^2.7.0"
   }
 }
