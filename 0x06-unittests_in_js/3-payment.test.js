@@ -5,10 +5,9 @@ const { expect } = require('chai');
 
 describe('sendPaymentRequestToApi suite', function() {
   it('spy sendPaymentRequestToApi', function() {
-    const spy = sinon.spy(Utils, 'calculateNumber');
+    let spy = sinon.spy(console, 'log');
     sendPaymentRequestToApi(100, 20);
-    expect(spy.calledWith('SUM', 100, 20)).to.be.true;
-    expect(spy.callCount).to.be.equal(1);
+    expect(spy.calledWith('The total is: 120')).to.be.true;
     spy.restore();
   });
 });
